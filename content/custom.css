@@ -1,0 +1,136 @@
+/* =========================================================
+   Aurion Audio — custom theme styles (light + blue)
+   Astra theme + core blocks + these overrides
+   ========================================================= */
+:root{
+  --blue:#007cba;
+  --blue-lt:#0693e3;
+  --blue-hover:#006ba1;
+  --ink:#32373c;
+  --ink-strong:#1a1a1a;
+  --muted:#6b7280;
+  --bg:#ffffff;
+  --panel:#ffffff;
+  --soft:#f4f5f7;
+  --line:#e5e7eb;
+}
+
+html{scroll-behavior:smooth;}
+body{background:var(--bg)!important;color:var(--ink)!important;font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,"Helvetica Neue",Arial,sans-serif;}
+
+a{color:var(--blue);}
+a:hover{color:var(--blue-hover);}
+
+h1,h2,h3,h4,h5,h6{color:var(--ink-strong);line-height:1.15;}
+
+/* ---------- Header ---------- */
+.site-header,.main-header-bar-wrap,.main-header-bar{background:var(--bg)!important;border-bottom:1px solid var(--line);}
+.site-title a{color:var(--ink-strong)!important;}
+.site-description{color:var(--blue);}
+.main-header-menu a,.main-header-menu .menu-link{color:var(--ink)!important;}
+.main-header-menu a:hover,.main-header-menu .menu-link:hover,.main-header-menu .current-menu-item>a{color:var(--blue)!important;}
+
+/* ---------- Layout ---------- */
+.ast-container{max-width:1200px;}
+.content-area{width:100%!important;}
+#primary{margin:0!important;}
+.site-content .ast-container{max-width:1200px;}
+.ast-separate-container .ast-article-single,.ast-separate-container .ast-article-post{background:transparent;padding:0;}
+
+/* ---------- Typography helpers ---------- */
+.aurion-eyebrow{color:var(--blue);letter-spacing:.28em;text-transform:uppercase;font-size:12px;font-weight:700;}
+.aurion-muted{color:var(--muted);}
+.aurion-gold{color:var(--blue);}
+
+/* ---------- Sections ---------- */
+.aurion-section{padding:96px 0;}
+.aurion-section-tight{padding:64px 0;}
+.aurion-wrap{max-width:1200px;margin:0 auto;padding:0 24px;}
+.aurion-center{text-align:center;}
+
+/* ---------- Hero ---------- */
+.aurion-hero{
+  background:
+    radial-gradient(ellipse 80% 60% at 72% 18%, rgba(0,124,186,.08), transparent 55%),
+    radial-gradient(ellipse 60% 50% at 15% 85%, rgba(0,124,186,.05), transparent 50%),
+    var(--bg);
+  border-bottom:1px solid var(--line);
+}
+.aurion-hero h1{font-size:clamp(2.4rem,5vw,4rem);font-weight:800;letter-spacing:-.01em;color:var(--ink-strong);margin:0 0 24px;}
+.aurion-hero-img img{max-width:480px;width:100%;height:auto;}
+
+/* ---------- Cards ---------- */
+.aurion-card{
+  background:var(--panel);
+  border:1px solid var(--line);
+  border-radius:8px;
+  padding:40px 32px;
+  height:100%;
+  box-shadow:0 1px 3px rgba(0,0,0,.04);
+  transition:transform .2s ease,border-color .2s ease,box-shadow .2s ease;
+}
+.aurion-card:hover{border-color:var(--blue-lt);transform:translateY(-5px);box-shadow:0 8px 24px rgba(0,124,186,.10);}
+.aurion-card img{width:56px;height:56px;margin-bottom:20px;}
+.aurion-card h3{font-size:1.25rem;margin-bottom:10px;color:var(--ink-strong);}
+.aurion-card p{margin:0;color:var(--muted);}
+
+/* ---------- Product tag ---------- */
+.aurion-product-tag{display:block;color:var(--blue);font-size:12px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;margin-bottom:8px;}
+
+/* ---------- Buttons ---------- */
+.wp-block-button__link,.ast-custom-button,a.ast-custom-button{
+  background:var(--blue)!important;
+  color:#ffffff!important;
+  border:none;
+  border-radius:3px;
+  padding:14px 32px;
+  font-weight:700;
+  letter-spacing:.06em;
+  text-transform:uppercase;
+  font-size:13px;
+}
+.wp-block-button__link:hover,.ast-custom-button:hover{background:var(--blue-hover)!important;color:#ffffff!important;}
+.wp-block-button.is-style-outline .wp-block-button__link{
+  background:transparent!important;color:var(--blue)!important;border:1px solid var(--blue)!important;
+}
+.wp-block-button.is-style-outline .wp-block-button__link:hover{background:var(--blue)!important;color:#ffffff!important;}
+
+/* ---------- Quote / testimonial ---------- */
+.aurion-quote{border-left:3px solid var(--blue);padding-left:28px;}
+.aurion-quote p{font-size:1.4rem;line-height:1.5;color:var(--ink);font-style:italic;}
+.aurion-quote .aurion-muted{font-style:normal;font-size:1rem;}
+
+/* ---------- CTA band ---------- */
+.aurion-cta{
+  background:linear-gradient(135deg, rgba(0,124,186,.08), rgba(0,124,186,.02)), var(--bg);
+  border-top:1px solid var(--line);
+}
+
+/* ---------- Contact / forms ---------- */
+.wpforms-form input[type=text],.wpforms-form input[type=email],.wpforms-form input[type=url],
+.wpforms-form textarea,.wpforms-form select{
+  background:var(--bg)!important;border:1px solid var(--line)!important;color:var(--ink)!important;border-radius:4px;
+}
+.wpforms-form label{color:var(--ink)!important;}
+.wpforms-form button[type=submit],.wpforms-form .wpforms-submit-container button{
+  background:var(--blue)!important;color:#ffffff!important;border:none!important;border-radius:3px!important;font-weight:700!important;text-transform:uppercase;letter-spacing:.06em;
+}
+.aurion-info-list{list-style:none;padding:0;margin:0;}
+.aurion-info-list li{margin-bottom:16px;color:var(--muted);}
+.aurion-info-list strong{color:var(--ink-strong);display:block;letter-spacing:.12em;text-transform:uppercase;font-size:12px;}
+
+/* ---------- Footer ---------- */
+.site-footer,.ast-small-footer,.ast-small-footer-wrap{background:var(--soft)!important;color:var(--muted)!important;border-top:1px solid var(--line);}
+.site-footer a{color:var(--blue);}
+
+/* ---------- Blog ---------- */
+.blog .entry-title a,.archive .entry-title a{color:var(--ink-strong);}
+.blog .entry-title a:hover{color:var(--blue);}
+.ast-separate-container .blog-layout-1 .ast-article-post{background:var(--panel);border:1px solid var(--line);border-radius:8px;}
+
+/* ---------- Responsive ---------- */
+@media (max-width:921px){
+  .aurion-section{padding:64px 0;}
+  .aurion-hero{text-align:center;}
+  .aurion-hero-img{margin-top:32px;}
+}

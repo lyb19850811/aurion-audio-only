@@ -1,0 +1,8 @@
+# 密钥与敏感文件（不提交到 git）
+.env.hostinger
+
+# 备份与归档
+backup/
+*.sql
+*.tar.gz
+*.tgz
